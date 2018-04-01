@@ -10,6 +10,12 @@ module Api::V1
       render json: @workouts
     end
 
+    def update
+      @workout = Workout.find(params[:id])
+      @workout.update_attributes(workout_params)
+      render json: @workouts
+    end
+
     private
 
     def workout_params
