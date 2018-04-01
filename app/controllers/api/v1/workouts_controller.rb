@@ -6,8 +6,14 @@ module Api::V1
     end
 
     def index
-      @workouts = Workout.all
+      @workouts = Workout.order("created_at DESC")
       render json: @workouts
+    end
+
+    private
+
+    def workout_params
+      params.require(:workout).permit(:date, :activity, :distance, :duration)
     end
   end
 end
