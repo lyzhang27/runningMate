@@ -16,10 +16,19 @@ module Api::V1
       render json: @workouts
     end
 
+    def destroy
+      @workout = Workout.find(params[:id])
+      if @workout.destroy
+        head :no_content, status: :ok
+      else
+        render json: @workout.errors, status: :unprocessable_entity
+      end
+    end
+
     private
 
     def workout_params
-      params.require(:workout).permit(:date, :activity, :distance, :duration)
+      params.require(:workout).permit(:date, :activity, :distance, :duration, :completed, :user_id)
     end
   end
 end

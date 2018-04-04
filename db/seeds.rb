@@ -5,30 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-workouts = Workout.create(
-  [
+# workouts = Workout.create(
+#   [
+#     {
+#       date: "2018-03-18",
+#       activity: "run",
+#       distance: 10,
+#       duration: 100
+#     },
+#     {
+#         date: "201-03-19",
+#         activity: "interval",
+#         distance: 20,
+#         duration: 200
+#     }
+#   ])
+#
+users = User.create(
+[
     {
-      date: "2018-03-18",
-      activity: "run",
-      distance: 10,
-      duration: 100
+        name: "Dummy1",
+        password: "abcde"
     },
     {
-        date: "201-03-19",
-        activity: "interval",
-        distance: 20,
-        duration: 200
+        name: "Dummy2",
+        password: "fghij"
     }
-  # {
-    #   title: "A twitter client idea",
-    #   body: "Only for replying to mentions and DMs"
-    # },
-    # {
-    #   title: "A novel set in Italy",
-    #   body: "A mafia crime drama starring Berlusconi"
-    # },
-    # {
-    #   title: "Card game design",
-    #   body: "Like Uno but involves drinking"
-    # }
-  ])
+])
